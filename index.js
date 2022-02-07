@@ -42,8 +42,8 @@ function calculate() {
   statC = (A / 100*3) * (30 * t);
   
   stat1.innerHTML = "1 day: " + "$" + parseFloat(statA).toFixed(2)
-  stat2.innerHTML = "7 day: " +"$" + parseFloat(statB).toFixed(2)
-  stat3.innerHTML = "30 day: " +"$" + parseFloat(statC).toFixed(2)
+  stat2.innerHTML = "7 days: " +"$" + parseFloat(statB).toFixed(2)
+  stat3.innerHTML = "30 days: " +"$" + parseFloat(statC).toFixed(2)
   
 }
 
