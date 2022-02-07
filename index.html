@@ -12,14 +12,35 @@
         
         <body>
             <h1>COMPOUND CALCULATOR</h1>
-            <div class="form"> <label>Amount Node: </label> <input id="p" placeholder="500"> </div>
-            <div class="form"> <label>No. of Days: </label> <input id="t" placeholder="7"> </div>
-            
-            <button id="btn" class="Button" onclick="calculate()">Calculate</button>
-         <div>
-            <p class="result" id="result"></p>
-        </div> 
 
+            <div>
+                <p class="price" id="priceCworld"></p>
+                <p id="priceCworldhidden" hidden></p>
+            </div>
+
+        <div>
+            <p class="text">If you want to know the amount without compound, let empty the "number of days" or put "0".</p>
+        </div> 
+            <div class="form"> <label>Amount Node: </label> <input id="p" placeholder="e.g. 500"> </div>
+            <div class="form"> <label>No. of Days: </label> <input id="t" placeholder="e.g. 7"> </div>
+            
+            <button id="btn" class="Button" onclick="calculate(); calculatehidden();">Calculate</button>
+    <div id="hid">
+
+         <div>
+            <p class="result" id="result">
+           
+        </div>
+
+         <div>
+            <p class="text">Estimated earning potential based on the " Daily Rewards "</p>
+        </div> 
+        <div> 
+            <p class="stats" id="stat1" >
+            <p class="stats" id="stat2" >
+            <p class="stats" id="stat3" >
+        </div> 
+    </div>
         <div class="IMG"><img src="/IMG/canworld.png" width="250px" alt="logo" /></div>
           </body>
           
