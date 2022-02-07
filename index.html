@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./IMG/canworld.png" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="IMG/canworld.png" />
-    <title>Cannaverse calc</title>
+    <title>Cannaverse compound calc</title>
 </head>
 
 <body>
 
     <main class="cw-wrapper">
 
-        <h1>CANNWORLD CALCULATOR</h1>
+        <h1>COMPOUND CALCULATOR</h1>
 
-        <p class="cw-coumpound-info">This tool was developed to calculate the rewards your node pays you every 24 hours.<br>
-            <br>It also calculates compound interest: based on the value of your node, the days you want to compound <br>and the current price of $CWORLD. </p>
-        
-        <p class="price" id="priceCworld"> <span class="cw-symbol">CWORLD Price : </span> $<span id="priceCworldhidden">...</span></p>
+        <p class="cw-coumpound-info">
+            This tool was developed to calculate the rewards your node pays you every 24 hours.
+            <br><br>
+            It also calculates compound interest: based on the value of your node, the days you want to compound and the current price of $CWORLD.
+        </p>
+
+        <p class="price cw-row-cta" id="priceCworld"> 
+            <span>
+                <span class="cw-symbol">CWORLD Price : </span> $<span id="priceCworldhidden">...</span>
+            </span>
+            <span>
+                <a href="https://pancakeswap.finance/swap?outputCurrency=0x1fbce266cc9949df60d5f8b6f4cc2758d63eb1f5" target="_blank">BUY $CWORLD</a>
+                <a href="https://app.cannaverse.financial" target="_blank">LAUNCH DAPP</a>
+            </span>
+        </p>
 
         <div class="cw-notice">
             <i class="uil uil-info-circle"></i>
@@ -29,7 +40,7 @@
         <div class="cw-row-wrapper">
 
             <div class="cw-group-input">
-                <label for="p">Total Node Value</label> 
+                <label for="p">Amount Node</label> 
                 <input type="text" id="p" placeholder="e.g. 500" />
             </div>
             <div class="cw-group-input">
@@ -56,7 +67,7 @@
                     </div>
                     <div class="cw-notice-bis full">
                         <p class="cw-notice-headline"><i class="uil uil-chart-growth"></i> Estimated earning potential based on the <b>Daily Rewards</b> </p>
-                        <table>
+                        <table id="cw-table">
                             <tr>
                                 <td class="cw-head">1 day</td>
                                 <td id="stat1">---</td>
@@ -70,6 +81,22 @@
                                 <td id="stat3">---</td>
                             </tr>
                         </table>
+                        <p class="cw-notice-headline"><i class="uil uil-chart-growth"></i> Compound Cycle </p>
+                        <table id="cw-table-cc">
+                            <thead>
+                                <tr class="cw-heading-table-cc">
+                                    <th>Day</td>
+                                    <th>Node Value <span class="cw-symbol">($CWORLD)</span></td>
+                                    <th>Daily Rewards <span class="cw-symbol">($CWORLD)</span></td>
+                                    <th>Daily Rewards <span class="cw-symbol">($)</span></td>
+                                </tr>
+                            </thead>
+                            <tbody id="cw-table-cc-body">
+
+                            </tbody>
+                        </table>
+                        <br>
+
                     </div>
                 </div>
             </div>

@@ -27,6 +27,7 @@ h1
 .cw-coumpound-info 
 {
 	color: rgb(88, 88, 88);
+	width: 768px;
 }
 
 .cw-notice 
@@ -144,7 +145,21 @@ table td
 {
 	padding: 10px;
 }
-
+table#cw-table-cc th, table#cw-table-cc td
+{
+	padding-left: 0;
+	padding-right: 15px;
+	font-size: .8em;
+	color:#8d8d8d;
+	font-weight: lighter;
+	letter-spacing: .01em;
+	text-align: left;
+    vertical-align: top;
+}
+table#cw-table-cc td 
+{
+	color: #d6d6d6;
+}
 .cw-head
 {
 	font-weight: 100;
@@ -158,8 +173,6 @@ table td
 	color:#ffffff;
 	font-family:Arial;
 	font-size:19px;
-	text-shadow:0px 1px 0px #000000;
-
 }
 
 .cw-symbol{
@@ -180,6 +193,30 @@ input {
 {
 	color: rgba(88, 88, 88, 0.685) !important;
 }
+.cw-row-cta{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top:20px;
+	align-items: center;
+	width: 100%;
+	flex-wrap: wrap;
+}
+.cw-row-cta a{
+	padding: 12px 20px;
+	background-color: #d4ab48;
+	text-decoration: none;
+	font-size: .7em;
+	border-radius: 5px;
+	transition: .3s;
+	display: inline-block;
+}
+.cw-row-cta a:last-of-type{
+	background-color: #088632;
+}
+.cw-row-cta a:hover{
+	transform: scale(1.1);
+}
 
 @media (max-width: 900px) {
 
@@ -199,11 +236,19 @@ input {
 	.cw-row-wrapper.nospace.inner 
 	{
 		flex-wrap: wrap;
-		
 	}
 	.cw-row-wrapper.nospace img
 	{
-		width: 100%;padding: 0 25%;
+		width: 100%;
+		padding: 0 25%;
+	}
+	.cw-row-cta > span {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.cw-coumpound-info 
+	{
+		width: 100%;
 	}
 
 }
