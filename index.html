@@ -4,48 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css" />
-    <title>Cannaverse compound calc</title>
+    <title>Cannaverse calc</title>
 </head>
 
 <body>
+
+    <main class="cw-wrapper">
+
+        <h1>CANNWORLD CALCULATOR</h1>
+
+        <p class="cw-coumpound-info">This tool was developed to calculate the rewards your node pays you every 24 hours.<br>
+            <br>It also calculates compound interest: based on the value of your node, the days you want to compound <br>and the current price of $CWORLD. </p>
         
-        <body>
-            <h1>COMPOUND CALCULATOR</h1>
+        <p class="price" id="priceCworld"> <span class="cw-symbol">CWORLD Price : </span> $<span id="priceCworldhidden">...</span></p>
 
-            <div>
-                <p class="price" id="priceCworld"></p>
-                <p id="priceCworldhidden" hidden></p>
-            </div>
-
-        <div>
-            <p class="text">If you want to know the amount without compound, let empty the "number of days" or put "0".</p>
-        </div> 
-            <div class="form"> <label>Amount Node: </label> <input id="p" placeholder="e.g. 500"> </div>
-            <div class="form"> <label>No. of Days: </label> <input id="t" placeholder="e.g. 7"> </div>
-            
-            <button id="btn" class="Button" onclick="calculate(); calculatehidden();">Calculate</button>
-    <div id="hid">
-
-         <div>
-            <p class="result" id="result">
-           
+        <div class="cw-notice">
+            <i class="uil uil-info-circle"></i>
+            <p>If you want to know the amount without compound, let empty the <b>"No. of days"</b> field or put <b>"0"</b>.</p>
         </div>
 
-         <div>
-            <p class="text">Estimated earning potential based on the " Daily Rewards "</p>
-        </div> 
-        <div> 
-            <p class="stats" id="stat1" >
-            <p class="stats" id="stat2" >
-            <p class="stats" id="stat3" >
-        </div> 
-    </div>
-        <div class="IMG"><img src="/IMG/canworld.png" width="250px" alt="logo" /></div>
-          </body>
-          
+        <div class="cw-row-wrapper">
 
-<script src="index.js" ></script>
+            <div class="cw-group-input">
+                <label for="p">Total Node Value</label> 
+                <input type="text" id="p" placeholder="e.g. 500" />
+            </div>
+            <div class="cw-group-input">
+                <label for="t">No. of Days</label> 
+                <input type="text" id="t" placeholder="e.g. 7" />
+            </div>
+            <div class="cw-group-input">
+                <button id="btn" class="Button" onclick="calculate();">Calculate</button>
+            </div>
+
+        </div>
+
+        <div id="hid">
+            <div class="cw-row-wrapper nospace">
+                <img src="./IMG/canworld.png" width="250px" alt="logo" />
+                <div class="cw-row-wrapper nospace inner">
+                    <div class="cw-notice-bis">
+                        <p class="cw-notice-headline"><i class="uil uil-database-alt"></i> Node Value <span id="cw-days"></span></p>
+                        <p id="cw-node-value" >---</p>
+                    </div>
+                    <div class="cw-notice-bis">
+                        <p class="cw-notice-headline"><i class="uil uil-bill"></i> Daily Rewards </p>
+                        <p id="cw-node-reward" >---</p>
+                    </div>
+                    <div class="cw-notice-bis full">
+                        <p class="cw-notice-headline"><i class="uil uil-chart-growth"></i> Estimated earning potential based on the <b>Daily Rewards</b> </p>
+                        <table>
+                            <tr>
+                                <td class="cw-head">1 day</td>
+                                <td id="stat1">---</td>
+                            </tr>
+                            <tr>
+                                <td class="cw-head">7 days</td>
+                                <td id="stat2">---</td>
+                            </tr>
+                            <tr>
+                                <td class="cw-head">30 days</td>
+                                <td id="stat3">---</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    
+    <script src="index.js" ></script>
+
 </body>
 
 </html>
