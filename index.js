@@ -28,8 +28,8 @@ function calculate() {
     // The equation is A = p * [[1 + (r/n)] ^ nt]
     A = (p * Math.pow((1 + (3 / 100)), (n * t)));
   
-    document.getElementById("cw-node-value").innerHTML = A.toFixed(2) + ' <span class="cw-symbol">$CWORD</span>';
-    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*3).toFixed(2) + ' <span class="cw-symbol">$CWORD</span>';
+    document.getElementById("cw-node-value").innerHTML = A.toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
+    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*3).toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
 
     price = document.getElementById("priceCworldhidden").innerHTML;
 
