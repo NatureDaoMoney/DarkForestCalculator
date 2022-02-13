@@ -23,19 +23,19 @@ function calculate() {
     p = document.getElementById("p").value;
     n = 1;
     t = document.getElementById("t").value; // no. of years
-    r = 3;
+    r = document.getElementById("r").value;
     
     // The equation is A = p * [[1 + (r/n)] ^ nt]
-    A = (p * Math.pow((1 + (3 / 100)), (n * t)));
+    A = (p * Math.pow((1 + (r / 100)), (n * t)));
   
     document.getElementById("cw-node-value").innerHTML = A.toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
-    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*3).toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
+    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*r).toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
 
     price = document.getElementById("priceCworldhidden").innerHTML;
 
-    statA = (A / 100*3) * (1 * price);
-    statB = (A / 100*3) * (7 * price);
-    statC = (A / 100*3) * (30 * price);
+    statA = (A / 100*r) * (1 * price);
+    statB = (A / 100*r) * (7 * price);
+    statC = (A / 100*r) * (30 * price);
   
     stat1.innerHTML = '<span class="cw-symbol">$</span>' + parseFloat(statA).toFixed(2)
     stat2.innerHTML = '<span class="cw-symbol">$</span>' + parseFloat(statB).toFixed(2)
@@ -51,8 +51,8 @@ function calculate() {
         // stat = (A / 100*3) * (l * price);
         // document.getElementById("cw-table").innerHTML += '<tr><td class="cw-head">Day '+l+'</td><td><span class="cw-symbol">$</span>'+parseFloat(stat).toFixed(2)+'</td></tr>';
         console.log(nv);
-        nv = (nv > 0) ? parseFloat(nv) + ((parseFloat(nv)/100) * 3) : parseFloat(p);
-        var dr = ((parseFloat(nv)/100) * 3);
+        nv = (nv > 0) ? parseFloat(nv) + ((parseFloat(nv)/100) * r) : parseFloat(p);
+        var dr = ((parseFloat(nv)/100) * r);
         var drd = dr * price;
         document.getElementById("cw-table-cc-body").innerHTML += '<tr><td>Day '+l+'</td><td>'+parseFloat(nv).toFixed(2)+'</td><td>'+parseFloat(dr).toFixed(2)+'</td><td>'+parseFloat(drd).toFixed(2)+'</td></tr>';
       }
