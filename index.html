@@ -7,14 +7,23 @@
     <link rel="icon" type="image/png" href="./IMG/canworld.png" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Cannaverse compound calc</title>
 </head>
 
 <body>
-
+    <div class="cv-gradient-top">
+        <span class="round-one"></span> 
+        <span class="round-two"></span>
+    </div>
     <main class="cw-wrapper">
+        <div class="cv-inner-content">
+            <h1><i class="uil uil-dashboard"></i> CANNWORLD CALCULATOR</h1>
+           
+        </div>
 
-        <h1>CANNWORLD CALCULATOR</h1>
 
         <p class="cw-coumpound-info">
             This tool was developed to calculate the rewards your node pays you every 24 hours.
@@ -53,14 +62,15 @@
             </div>
         </div>
             <div class="cw-group-input2">
-                <button id="btn" class="Button" onclick="calculate();">Calculate</button>
+                <button id="btn" class="Button" onclick="calculate();">CALCULATE</button>
             </div>
 
         </div>
 
         <div id="hid">
             <div class="cw-row-wrapper nospace">
-                <img src="./IMG/canworld.png" width="250px" alt="logo" />
+                <img src="./IMG/canna.png" width="160px" alt="FLOWER" />
+
                 <div class="cw-row-wrapper nospace inner">
                     <div class="cw-notice-bis">
                         <p class="cw-notice-headline"><i class="uil uil-database-alt"></i> Node Value <span id="cw-days"></span></p>
@@ -91,8 +101,8 @@
                             <thead>
                                 <tr class="cw-heading-table-cc">
                                     <th>Day</td>
-                                    <th>Node Value <span class="cw-symbol">($CWORLD)</span></td>
-                                    <th>Daily Rewards <span class="cw-symbol">($CWORLD)</span></td>
+                                    <th>Node Value <span class="cw-symbol">(CWORLD)</span></td>
+                                    <th>Daily Rewards <span class="cw-symbol">(CWORLD)</span></td>
                                     <th>Daily Rewards <span class="cw-symbol">($)</span></td>
                                 </tr>
                             </thead>
