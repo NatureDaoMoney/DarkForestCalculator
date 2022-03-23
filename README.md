@@ -1,2 +1,2 @@
-# beffjezoscode.github.io
+# darkforestcalculator.io
 Compound calc
