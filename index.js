@@ -1,9 +1,9 @@
-// Price Cworld
+// Price NATR
 const getData = async () => {
   fetch('https://api.pancakeswap.info/api/v2/tokens/0x1fbce266cc9949df60d5f8b6f4cc2758d63eb1f5')
  .then(response => response.json())
  .then(data => {
-   document.getElementById("priceCworldhidden").innerHTML = parseFloat(data.data.price).toFixed(2)
+   document.getElementById("priceNATRhidden").innerHTML = 0.00000047
  });
 }
 getData();
@@ -28,10 +28,10 @@ function calculate() {
     // The equation is A = p * [[1 + (r/n)] ^ nt]
     A = (p * Math.pow((1 + (r / 100)), (n * t)));
   
-    document.getElementById("cw-node-value").innerHTML = A.toFixed(2) + ' <span class="cw-symbol">CWORLD</span>';
-    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*r).toFixed(2) + ' <span class="cw-symbol">$CWORLD</span>';
+    document.getElementById("cw-node-value").innerHTML = A.toFixed(2) + ' <span class="cw-symbol">NATR</span>';
+    document.getElementById("cw-node-reward").innerHTML = (A.toFixed(2) / 100*r).toFixed(2) + ' <span class="cw-symbol">$NATR</span>';
 
-    price = document.getElementById("priceCworldhidden").innerHTML;
+    price = document.getElementById("priceNATRhidden").innerHTML;
 
     statA = (A / 100*r) * (1 * price);
     statB = (A / 100*r) * (7 * price);
@@ -58,5 +58,5 @@ function calculate() {
       }
     }
 
-    // price = document.getElementById("priceCworldhidden").innerHTML;
+    // price = document.getElementById("priceNATRhidden").innerHTML;
 }
